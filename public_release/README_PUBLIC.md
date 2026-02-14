@@ -22,7 +22,7 @@ Shopify-shaped; direct Shopify exports supported via adapter artifacts.
 - One-page decision memo: [`public_release/docs/DECISION_MEMO_1PAGE.md`](public_release/docs/DECISION_MEMO_1PAGE.md)
 - Public case-study narrative: [`public_release/case_study_readme.md`](public_release/case_study_readme.md)
 - Adapter contract: [`docs/SHOPIFY_ADAPTER_CONTRACT.md`](docs/SHOPIFY_ADAPTER_CONTRACT.md)
-- Adapter demo outputs: [`public_demo/shopify_demo_output.png`](public_demo/shopify_demo_output.png), [`public_demo/shopify_demo_summary.csv`](public_demo/shopify_demo_summary.csv)
+- Adapter proof outputs: [`public_demo/shopify_demo_output.png`](public_demo/shopify_demo_output.png), [`public_demo/shopify_demo_summary.csv`](public_demo/shopify_demo_summary.csv)
 
 ## Visual Snapshot
 ![Chart 1 - Cohort Logo Retention](public_demo/story_chart_1.png)
@@ -33,5 +33,5 @@ Shopify-shaped; direct Shopify exports supported via adapter artifacts.
 - Confirm target families are consistent across story and memo (`Seasonal`, `Home_Fragrance`, `Bags`).
 - Confirm the narrative is directional and non-causal.
 - Confirm thresholds and guardrails are explicit, numeric, and approved before launch.
-- Confirm adapter path and demo artifacts are present and public-safe.
+- Confirm adapter path and proof artifacts are present and public-safe.
 - Use the zip bundle as the canonical handoff artifact.

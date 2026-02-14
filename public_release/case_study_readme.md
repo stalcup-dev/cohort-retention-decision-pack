@@ -38,4 +38,4 @@ which product families should be prioritized first to improve early retention an
 ## Public Artifacts
 - `public_release/exports/cohort_retention_story.html`
 - `public_release/docs/DECISION_MEMO_1PAGE.md`
-- `public_demo/demo_output.png`
+- `public_demo/shopify_demo_output.png`

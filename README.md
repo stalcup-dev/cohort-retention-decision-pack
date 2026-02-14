@@ -1,54 +1,73 @@
 # Cohort Retention Decision Pack (DTC / eCommerce)
 
-## Executive Summary (90-second skim)
-- Business question: which first-order families should be prioritized first to improve M2 retention and value quality.
-- North Star: `M2 logo retention (cohort-weighted)`.
-- Key signal (descriptive): `Seasonal`, `Home_Fragrance`, and `Bags` under-index at M2.
-- Decision: prioritize reversible retention tests in those three families with explicit thresholds and guardrails.
-- Alpha honesty: this repo is diagnostic + execution planning, not causal attribution.
+Outcome: this repo produces a decision-ready retention pack that identifies the first product families to test next (`Seasonal`, `Home_Fragrance`, `Bags`) and ships the artifacts needed for a scale/pause decision.
 
-## Start Here
-1. Story PDF: [`exports/cohort_retention_story.pdf`](exports/cohort_retention_story.pdf)
-2. Story HTML: [`exports/cohort_retention_story.html`](exports/cohort_retention_story.html)
-3. Decision memo: [`docs/DECISION_MEMO_1PAGE.md`](docs/DECISION_MEMO_1PAGE.md)
-4. Case study: [`case_study_readme.md`](case_study_readme.md)
-5. Expert audit summary: [`docs/EXPERT_UPDATE.md`](docs/EXPERT_UPDATE.md)
+## Who This Is For (ICP)
+- RevOps, Retention, and BI leaders who need a fast M2 retention prioritization read.
+- Hiring managers reviewing decision quality, governance discipline, and operator readiness.
+- ECommerce teams with Shopify-shaped exports that need a practical 2-week experiment plan.
 
-## Visual Snapshot
-![Chart 1 - Cohort Logo Retention](public_demo/story_chart_1.png)
-![Chart 2 - Net Retention Proxy Curves](public_demo/story_chart_2.png)
-![Chart 3 - M2 Retention by Family](public_demo/story_chart_3.png)
+## What It Outputs
+- Public release ZIP: [`exports/public_release_latest.zip`](exports/public_release_latest.zip)
+- Story artifacts:
+  - HTML: [`public_release/exports/cohort_retention_story.html`](public_release/exports/cohort_retention_story.html)
+  - PDF snapshot: [`exports/cohort_retention_story.pdf`](exports/cohort_retention_story.pdf)
+- Decision artifacts:
+  - Memo: [`public_release/docs/DECISION_MEMO_1PAGE.md`](public_release/docs/DECISION_MEMO_1PAGE.md)
+  - Hiring manager TL;DR: [`public_release/docs/HIRING_MANAGER_TLDR.md`](public_release/docs/HIRING_MANAGER_TLDR.md)
+  - Case study: [`public_release/case_study_readme.md`](public_release/case_study_readme.md)
+- Operating decisions/tickets:
+  - scale / pause / iterate recommendation structure in [`public_release/docs/DECISION_MEMO_1PAGE.md`](public_release/docs/DECISION_MEMO_1PAGE.md)
+  - target-family prioritization handoff in [`public_release/docs/HIRING_MANAGER_TLDR.md`](public_release/docs/HIRING_MANAGER_TLDR.md)
+- Shopify-operable proof path:
+  - Adapter contract: [`docs/SHOPIFY_ADAPTER_CONTRACT.md`](docs/SHOPIFY_ADAPTER_CONTRACT.md)
+  - Adapter proof outputs: [`public_demo/shopify_demo_summary.csv`](public_demo/shopify_demo_summary.csv), [`public_demo/shopify_demo_output.png`](public_demo/shopify_demo_output.png)
 
-## What You Get
-- Story artifacts: `exports/cohort_retention_story.pdf`, `exports/cohort_retention_story.html`
-- Decision artifacts: `docs/DECISION_MEMO_1PAGE.md`, `docs/EXPERT_UPDATE.md`
-- Governance artifacts: `docs/QA_CHECKLIST.md`, `docs/DRIVER_COVERAGE_REPORT.md`
-- Final pack output: `exports/final_decision_pack_v1`
-- Public-safe pack output: `exports/public_release_latest.zip`
+## Why Trust This
+- Deterministic packaging: same commands produce the same release structure.
+- Contracted chart narrative: fixed 3-chart story, decision-aligned memo.
+- Quality gates:
+  - `pytest -q`
+  - public redaction scanner: `scripts/public_audit.py`
+  - release bundler: `scripts/build_public_zip.py`
+- Security/redaction controls:
+  - public release built from allowlisted artifacts only
+  - forbidden token/path scan before packaging
+  - private internal work kept outside public release bundle
 
-## One Command: Zero -> Decision Pack
-Prerequisites:
-- Place raw input at `data_raw/OnlineRetailII.xlsx`
-- Install dependencies:
+## Run (Minimal, Copy-Paste)
 ```powershell
 py -3 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -e .
 pip install -e ".[dev]"
+
+py -3 -m pytest -q
+py -3 scripts/public_audit.py
+py -3 scripts/build_public_zip.py
 ```
 
-Run:
-```powershell
-py -3 scripts/run_zero_to_decision.py --input data_raw/OnlineRetailII.xlsx
-```
+## Proof (Current Repo)
+- Tests: `pytest -q` (see latest run in terminal output below)
+- Public audit: no forbidden paths/tokens in public bundle inputs
+- Release artifact: [`exports/public_release_latest.zip`](exports/public_release_latest.zip)
 
-## Reviewer Checklist
-- Verify targets are consistent across story and memo.
-- Verify thresholds and guardrails are explicit, numeric, and owner-approved in the memo.
-- Verify public artifacts are present and linkable.
-- Verify no private/internal assets are referenced in public package.
-- Use pack zip as canonical handoff (`exports/public_release_latest.zip`).
+### Visual Snapshot
+![Chart 1 - Cohort Logo Retention](public_demo/story_chart_1.png)
+![Chart 2 - Net Retention Proxy Curves](public_demo/story_chart_2.png)
+![Chart 3 - M2 Retention by Family](public_demo/story_chart_3.png)
 
-## Technical Detail
-- Technical appendix: `docs/TECHNICAL_APPENDIX.md`
-- Supplementary docs index: `docs/archive/README.md`
+## Public vs Private
+- Public-safe artifacts:
+  - `public_release/`
+  - `exports/public_release_latest.zip`
+  - `README.md`, `case_study_readme.md`, decision docs linked above
+- Private/internal working surfaces (not part of public release contract):
+  - private working folders and internal notes
+  - internal pipeline scratch/temp folders
+  - raw input staging and local environment artifacts
+- Redaction note: publish from the public bundle output, not from raw repo root.
+
+## Additional Reviewer Docs
+- Buyer-friction audit: [`docs/AUDIT_PUBLIC.md`](docs/AUDIT_PUBLIC.md)
+- Release checklist: [`docs/SHIP_CHECKLIST.md`](docs/SHIP_CHECKLIST.md)

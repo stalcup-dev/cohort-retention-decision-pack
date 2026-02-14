@@ -45,4 +45,4 @@ If we run tests that improve M2 logo retention by a pre-agreed **Delta** among e
 3. Skim `public_release/case_study_readme.md`
 
 ## Shopify-operable path
-Shopify-shaped cohort analysis with **direct export ingestion supported via adapter artifacts** (see `public_demo/` + `SHOPIFY_ADAPTER_CONTRACT.md`).
+Shopify-shaped cohort analysis with **direct export ingestion supported via adapter artifacts** (see `public_demo/shopify_demo_summary.csv`, `public_demo/shopify_demo_output.png`, and `SHOPIFY_ADAPTER_CONTRACT.md`).
