@@ -1,0 +1,56 @@
+{
+  "input_path": "C:\\Users\\halol\\Desktop\\revops\\data_raw\\OnlineRetailII.xlsx",
+  "sheets_detected": [
+    "Year 2009-2010",
+    "Year 2010-2011"
+  ],
+  "sheet_rows": {
+    "Year 2009-2010": 525461,
+    "Year 2010-2011": 541910
+  },
+  "sheet_date_ranges": {
+    "Year 2009-2010": {
+      "date_column": "InvoiceDate",
+      "min_date": "2009-12-01T07:45:00",
+      "max_date": "2010-12-09T20:01:00",
+      "nat_pct": 0.0
+    },
+    "Year 2010-2011": {
+      "date_column": "InvoiceDate",
+      "min_date": "2010-12-01T08:26:00",
+      "max_date": "2011-12-09T12:50:00",
+      "nat_pct": 0.0
+    }
+  },
+  "raw_sum_rows": 1067371,
+  "raw_min_date": "2009-12-01T07:45:00",
+  "raw_max_date": "2011-12-09T12:50:00",
+  "processed_order_lines_rows": 1067371,
+  "processed_orders_rows": 53628,
+  "processed_customers_rows": 5878,
+  "chart2_family_count": 8,
+  "chart2_min_n_customers": 233,
+  "chart2_observed_only": true,
+  "chart2_right_censored_missing": true,
+  "H": 6,
+  "MIN_COHORT_N": 50,
+  "confound_rows": 21,
+  "gate_c_material_count": 0,
+  "reconcile_status": "OK_BOTH_SHEETS",
+  "chart2_plot_pool_count": 10,
+  "chart2_used_fallback": false,
+  "chart2_selected_cohorts": [
+    "2010-11",
+    "2010-02",
+    "2009-12"
+  ],
+  "chart2_selected_count": 3,
+  "chart2_selected_min_n0": 325,
+  "chart2_policy": {
+    "MIN_COHORT_N": 50,
+    "MIN_PLOT_COHORT_N": 200,
+    "H": 6,
+    "RIGHT_CENSOR_MODE": "missing_not_zero",
+    "OBSERVED_ONLY": true
+  }
+}

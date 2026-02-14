@@ -1,0 +1,22 @@
+{
+  "gate_a_pct_valid_nonpositive_net": 0.0,
+  "gate_a_trigger_fired": false,
+  "gate_b_gross_non_other_pct": 79.7,
+  "gate_b_customer_non_other_pct": 59.08,
+  "chart2_selected_cohorts": [
+    "2009-12",
+    "2010-02",
+    "2010-11"
+  ],
+  "chart2_selected_count": 3,
+  "chart2_m2_net_proxy_median": 0.3075530007108169,
+  "chart2_m6_net_proxy_median": 0.2193988643780225,
+  "chart3_worst_family": "Seasonal",
+  "chart3_worst_family_m2_logo": 0.167381974248927,
+  "chart3_worst_family_m2_net_proxy": 0.2068717742228361,
+  "chart3_worst_family_n": 233,
+  "chart3_best_family": "Drinkware",
+  "chart3_best_family_m2_logo": 0.2739273927392739,
+  "chart3_best_family_m2_net_proxy": 0.3399363828138474,
+  "chart3_best_family_n": 303
+}

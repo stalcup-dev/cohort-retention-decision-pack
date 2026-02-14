@@ -1,0 +1,31 @@
+{
+  "build_timestamp_utc": "2026-02-11T17:48:02+00:00",
+  "git_commit": null,
+  "artifacts": [
+    {
+      "path": "data_processed/chart2_net_proxy_curves.csv",
+      "sha256": "a7fc249ab6c668f72f75c7ffe6a6e7ea15ae21abf36489afc9599fd0f9ef3789",
+      "size_bytes": 12074
+    },
+    {
+      "path": "data_processed/chart2_selection_candidates.csv",
+      "sha256": "dd6f0e1d6b2952be48e6b4ca65efd8f6ac5fd5409594937c27d5435709d4d5eb",
+      "size_bytes": 1543
+    },
+    {
+      "path": "data_processed/scope_receipts.json",
+      "sha256": "4c682d2f1de16bc4c9dda2e55bd3d94423e66f61c6c8cea17d5ef24a6b5cdaab",
+      "size_bytes": 1513
+    },
+    {
+      "path": "docs/DECISION_MEMO_1PAGE.md",
+      "sha256": "c908d0d848ecf79114ee80041648d503e9f0eeabda0d09ed6e027bf2eb38e44b",
+      "size_bytes": 3191
+    },
+    {
+      "path": "exports/cohort_retention_story.html",
+      "sha256": "50fec3d9d3a72ce48498672803417ff6e646f3330ba0cbf43c9840c606cc8390",
+      "size_bytes": 520501
+    }
+  ]
+}

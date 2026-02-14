@@ -1,0 +1,14 @@
+id,created_at,customer_id,financial_status,cancelled_at,lineitem_sku,lineitem_name,lineitem_quantity,lineitem_price,total_price
+1001,2024-01-05T10:00:00,C001,paid,,SKU-SEA-01,Seasonal Candle Set,1,40,40
+1002,2024-01-12T09:30:00,C002,paid,,SKU-BAG-01,Canvas Tote Bag,1,30,30
+1003,2024-01-18T14:20:00,C003,paid,,SKU-HF-01,Home Fragrance Diffuser,1,25,25
+1004,2024-02-03T11:10:00,C004,paid,,SKU-SEA-02,Seasonal Gift Box,1,50,50
+1005,2024-02-11T16:05:00,C005,paid,,SKU-HF-02,Scented Room Spray,1,45,45
+1006,2024-02-20T13:40:00,C006,paid,,SKU-BAG-02,Travel Organizer Bag,1,20,20
+1007,2024-03-07T08:45:00,C001,paid,,SKU-SEA-03,Refill Candle Pack,1,20,20
+1008,2024-03-09T12:00:00,C003,paid,,SKU-HF-03,Fragrance Refill Oil,1,15,15
+1009,2024-03-14T10:25:00,C006,paid,,SKU-BAG-03,Bag Accessory Pouch,1,10,10
+1010,2024-03-21T15:30:00,C002,voided,2024-03-21T15:31:00,SKU-BAG-04,Cancelled Bag Order,1,18,18
+1011,2024-04-05T09:55:00,C004,paid,,SKU-SEA-04,Seasonal Replenishment Pack,1,35,35
+1012,2024-04-08T17:15:00,C006,paid,,SKU-BAG-05,Organizer Refill Kit,1,12,12
+1013,2024-04-15T11:40:00,,paid,,SKU-MISC-01,Guest Checkout Item,1,22,22

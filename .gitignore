@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+.pytest_cache/
+pytest-cache-files-*/
+.tmp/
+.tmp*/
+data_raw/*
+!data_raw/.gitkeep
+data_processed/*.csv
+!data_processed/confound_m2_family_all_vs_retail.csv
+!data_processed/gate_a.json
+!data_processed/ingest_stats.json

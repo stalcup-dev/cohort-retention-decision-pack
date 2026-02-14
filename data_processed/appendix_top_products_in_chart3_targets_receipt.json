@@ -1,0 +1,13 @@
+{
+  "target_families": [
+    "Seasonal",
+    "Home_Fragrance",
+    "Bags"
+  ],
+  "min_sku_n": 30,
+  "topk_skus_per_family": 10,
+  "observed_only": true,
+  "right_censor_mode": "missing_not_zero",
+  "max_observed_month": "2011-12",
+  "rows_written": 29
+}

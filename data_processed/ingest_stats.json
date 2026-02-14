@@ -1,0 +1,15 @@
+{
+  "raw_row_count": 1067371,
+  "normalized_row_count": 1067371,
+  "dropped_nat_order_ts_row_count": 0,
+  "nat_order_ts_pct": 0.0,
+  "null_customer_rate_pct": 22.766872999172733,
+  "min_order_ts": "2009-12-01T07:45:00",
+  "max_order_ts": "2011-12-09T12:50:00",
+  "top_prefix_counts": {
+    "5": 939382,
+    "4": 108489,
+    "C": 19494,
+    "A": 6
+  }
+}

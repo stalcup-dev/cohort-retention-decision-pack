@@ -1,0 +1,7 @@
+{
+  "gate_a_pct_valid_nonpositive_net": 0.0,
+  "trigger_threshold_pct": 0.5,
+  "trigger_fired": false,
+  "strict_validity_applied": false,
+  "force_strict_validity_flag": false
+}

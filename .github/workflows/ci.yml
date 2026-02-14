@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  quality-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Ensure powershell alias for smoke script
+        run: |
+          if ! command -v powershell >/dev/null 2>&1; then
+            sudo ln -s "$(command -v pwsh)" /usr/local/bin/powershell
+          fi
+
+      - name: Ruff
+        run: ruff check .
+
+      - name: Pytest
+        run: pytest -q
+
+      - name: Smoke pipeline
+        run: python scripts/smoke_pipeline.py
+

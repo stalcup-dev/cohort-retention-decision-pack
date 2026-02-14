@@ -1,0 +1,24 @@
+{
+  "input_path": "data_raw\\OnlineRetailII.xlsx",
+  "source_type": "EXCEL",
+  "detected_sheets": [
+    "Year 2009-2010",
+    "Year 2010-2011"
+  ],
+  "chosen_sheet": "Year 2009-2010",
+  "resolved_columns": {
+    "order": "Invoice",
+    "sku": "StockCode",
+    "description": "Description",
+    "quantity": "Quantity",
+    "order_ts": "InvoiceDate",
+    "unit_price": "Price",
+    "customer_id": "Customer ID",
+    "country": "Country"
+  },
+  "row_count": 525461,
+  "null_customer_rate_pct": 20.53948818275762,
+  "nat_invoice_date_pct": 0.0,
+  "min_invoice_date": "2009-12-01T07:45:00",
+  "max_invoice_date": "2010-12-09T20:01:00"
+}
