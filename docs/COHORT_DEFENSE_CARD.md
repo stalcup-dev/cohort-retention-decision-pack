@@ -1,9 +1,7 @@
 # COHORT DEFENSE CARD
 
 ## Use This With
-- Learning map: `docs/TEACHING_HUB.md`
 - Talk tracks: `docs/CHART_TALK_TRACKS.md`
-- Teaching walkthrough: `docs/TEACHING_REPORT.md`
 - Source QA evidence: `docs/QA_CHECKLIST.md`
 
 ## Dataset Scope (from receipts)
@@ -34,15 +32,15 @@
   - Compare rows to see whether newer cohorts retain better/worse at the same month index.
 - Common pitfall: comparing absolute cohort sizes from color intensity alone instead of using retention rate values.
 
-### Chart 2: Family Impact Scatter (M2)
-- Question answered: Which first-order families combine weak repeat behavior (logo retention) and weak refund-aware value (net proxy) at M2?
+### Chart 2: Net Retention Proxy Curves (3 Cohorts)
+- Question answered: How does refund-aware value retention evolve over months for representative cohorts?
 - How to read it:
-  - X axis is M2 logo retention by family; Y axis is M2 net retention proxy by family.
-  - Bottom-right indicates refund drag (repeat ok, value weak); top-left indicates repeat weakness (value ok, repeat weak).
-  - Point size/labels reflect `n_customers`; tiny-n families are suppressed (`n<MIN_COHORT_N`).
-- Metric definition in-chart: `net_retention_proxy(M2) = sum(net_revenue_proxy_total at M2) / sum(gross_revenue_valid at M0)` within a family (monthly, not cumulative).
-- Policy line in-chart: observed-only (`OBSERVED_ONLY=True`), right-censored months excluded (`RIGHT_CENSOR_MODE=missing_not_zero`).
-- Common pitfall: reading a low Y as \"profit loss\"; it is a revenue proxy ratio, directional for prioritization.
+  - Each line is one selected cohort over months `0..6`.
+  - Compare line slopes to judge value decay stability across cohorts.
+  - Selection uses eligible cohorts only and chooses bottom/mid/top by M2 logo retention.
+- Metric definition in-chart: `net_retention_proxy(c,t) = net_revenue_proxy_total(c,t) / denom_month0_gross_valid(c)` (monthly, not cumulative).
+- Policy line in-chart: observed-only (`OBSERVED_ONLY=True`), right-censored months shown as missing (`RIGHT_CENSOR_MODE=missing_not_zero`).
+- Common pitfall: reading low values as profit statements; this is a directional revenue proxy ratio for prioritization.
 
 ### Chart 3: M2 Retention by first_product_family
 - Question answered: Which first-order families over/under-index on month-2 logo retention, with what sample size?

@@ -1,33 +1,58 @@
-# Week 2 Readout Template - Retention Experiment Decision
+# Week 2 Readout - Retention Experiment Decision
 
-## Use This With
-- Learning map: `docs/TEACHING_HUB.md`
-- Experiment setup: `docs/EXPERIMENT_BRIEF_SAMPLE.md`
-- Teaching module: `private_teaching/module_experiment_readout_sql.html`
+## Purpose
+Provide a single, decision-ready format for week-2 experiment review across target families.
 
-## Executive Summary
-- Recommendation: `Scale` / `Pause` / `Iterate`
-- Basis: M2 logo retention, M2 net proxy retention, and guardrails
-- Confidence: `High` / `Medium` / `Low`
+## Audience
+- RevOps decision owner
+- Analytics readout owner
+- Finance guardrail approver
 
-## Experiment Snapshot
-| family | variant | control_n | treatment_n | status |
-|---|---|---:|---:|---|
-| `<TARGET_FAMILY>` | `<VARIANT_NAME>` | `<N_CTRL>` | `<N_TRT>` | `<RUNNING/COMPLETE>` |
+## Executive Summary (Required)
+- Recommendation: `Scale`, `Iterate`, or `Pause`
+- Decision basis: M2 logo retention, M2 net proxy retention, and guardrail status
+- Confidence level: `High`, `Medium`, or `Low` with one-sentence rationale
 
-## KPI Readout (Control vs Treatment)
-| metric | control | treatment | delta | threshold | pass |
-|---|---:|---:|---:|---:|---|
-| M2 logo retention | `<C_LOGO>` | `<T_LOGO>` | `<DELTA_LOGO>` | `+X pp` | `<Y/N>` |
-| M2 net proxy retention | `<C_NET>` | `<T_NET>` | `<DELTA_NET>` | `+Y pp` | `<Y/N>` |
-| net-minus-logo gap (pp) | `<C_GAP>` | `<T_GAP>` | `<DELTA_GAP>` | `toward >= 0` | `<Y/N>` |
+## Experiment Snapshot (Required Fields)
+- Family tested
+- Variant name
+- Control cohort size (`control_n`)
+- Treatment cohort size (`treatment_n`)
+- Run status (`RUNNING` or `COMPLETE`)
 
-## Guardrail Check
-| guardrail | control | treatment | status |
-|---|---:|---:|---|
-| margin proxy | `<C_MARGIN>` | `<T_MARGIN>` | `<PASS/FAIL>` |
-| cohort quality (`n_customers`) | `<C_QUAL>` | `<T_QUAL>` | `<PASS/FAIL>` |
-| credit-like/refund proxy | `<C_CREDIT>` | `<T_CREDIT>` | `<PASS/FAIL>` |
+## KPI Readout (Required Fields)
+- M2 logo retention:
+  - control value
+  - treatment value
+  - delta
+  - threshold
+  - pass/fail
+- M2 net proxy retention:
+  - control value
+  - treatment value
+  - delta
+  - threshold
+  - pass/fail
+- Net-minus-logo gap (pp):
+  - control value
+  - treatment value
+  - delta
+  - direction toward `>= 0 pp`
+  - pass/fail
+
+## Guardrail Check (Required Fields)
+- Margin proxy:
+  - control value
+  - treatment value
+  - pass/fail
+- Cohort quality (`n_customers`):
+  - control value
+  - treatment value
+  - pass/fail
+- Credit-like/refund proxy:
+  - control value
+  - treatment value
+  - pass/fail
 
 ## Decision Logic
 - `Scale` when KPI thresholds are met and all guardrails pass.
@@ -35,11 +60,11 @@
 - `Pause` when any critical guardrail fails or KPI deltas are adverse.
 
 ## Next Actions
-- If `Scale`: expand audience to `<PERCENT>%`, keep holdout.
-- If `Iterate`: apply one change only (`offer`, `timing`, or `creative`) and rerun.
-- If `Pause`: stop exposure and document failure mode.
+- If `Scale`: expand audience in controlled increments and keep holdout.
+- If `Iterate`: adjust one lever only (offer, timing, or creative) and rerun.
+- If `Pause`: stop exposure and document failure mode for the next cycle.
 
-## Example Filled Row (Illustrative)
-| family | variant | control_n | treatment_n | status |
-|---|---|---:|---:|---|
-| Seasonal | Bundle + winback v1 | 220 | 227 | COMPLETE |
+## Week-2 Readout Output Bundle
+- Updated recommendation line in decision memo.
+- KPI/guardrail evidence table attached in the experiment ticket.
+- Next checkpoint date and owner assignment logged.

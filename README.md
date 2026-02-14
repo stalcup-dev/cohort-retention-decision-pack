@@ -1,41 +1,44 @@
 # Cohort Retention Decision Pack (DTC / eCommerce)
 
-Outcome: this repo produces a decision-ready retention pack that identifies the first product families to test next (`Seasonal`, `Home_Fragrance`, `Bags`) and ships the artifacts needed for a scale/pause decision.
+This repository delivers a decision-ready RevOps retention pack that identifies where to act first (`Seasonal`, `Home_Fragrance`, `Bags`) and provides release artifacts for a scale/pause decision.
 
 ## Who This Is For (ICP)
-- RevOps, Retention, and BI leaders who need a fast M2 retention prioritization read.
-- Hiring managers reviewing decision quality, governance discipline, and operator readiness.
-- ECommerce teams with Shopify-shaped exports that need a practical 2-week experiment plan.
+- RevOps and Retention leaders prioritizing early repeat growth without margin drift.
+- BI and Analytics teams responsible for decision-ready operating readouts.
+- Hiring managers evaluating decision quality, governance discipline, and execution readiness.
 
-## What It Outputs
-- Public release ZIP: [`exports/public_release_latest.zip`](exports/public_release_latest.zip)
-- Story artifacts:
-  - HTML: [`public_release/exports/cohort_retention_story.html`](public_release/exports/cohort_retention_story.html)
-  - PDF snapshot: [`exports/cohort_retention_story.pdf`](exports/cohort_retention_story.pdf)
+## 90-Second Start
+1. Open the public bundle: [`exports/public_release_latest.zip`](exports/public_release_latest.zip)
+2. Review the story: [`public_release/exports/cohort_retention_story.html`](public_release/exports/cohort_retention_story.html)
+3. Read the one-page decision memo: [`public_release/docs/DECISION_MEMO_1PAGE.md`](public_release/docs/DECISION_MEMO_1PAGE.md)
+4. Skim the hiring manager summary: [`public_release/docs/HIRING_MANAGER_TLDR.md`](public_release/docs/HIRING_MANAGER_TLDR.md)
+
+## Outputs You Get
+- Public release package:
+  - ZIP: [`exports/public_release_latest.zip`](exports/public_release_latest.zip)
 - Decision artifacts:
+  - Story HTML: [`public_release/exports/cohort_retention_story.html`](public_release/exports/cohort_retention_story.html)
+  - Story PDF: [`exports/cohort_retention_story.pdf`](exports/cohort_retention_story.pdf)
   - Memo: [`public_release/docs/DECISION_MEMO_1PAGE.md`](public_release/docs/DECISION_MEMO_1PAGE.md)
-  - Hiring manager TL;DR: [`public_release/docs/HIRING_MANAGER_TLDR.md`](public_release/docs/HIRING_MANAGER_TLDR.md)
-  - Case study: [`public_release/case_study_readme.md`](public_release/case_study_readme.md)
-- Operating decisions/tickets:
-  - scale / pause / iterate recommendation structure in [`public_release/docs/DECISION_MEMO_1PAGE.md`](public_release/docs/DECISION_MEMO_1PAGE.md)
-  - target-family prioritization handoff in [`public_release/docs/HIRING_MANAGER_TLDR.md`](public_release/docs/HIRING_MANAGER_TLDR.md)
+  - Hiring summary: [`public_release/docs/HIRING_MANAGER_TLDR.md`](public_release/docs/HIRING_MANAGER_TLDR.md)
+  - Case narrative: [`public_release/case_study_readme.md`](public_release/case_study_readme.md)
 - Shopify-operable proof path:
   - Adapter contract: [`docs/SHOPIFY_ADAPTER_CONTRACT.md`](docs/SHOPIFY_ADAPTER_CONTRACT.md)
-  - Adapter proof outputs: [`public_demo/shopify_demo_summary.csv`](public_demo/shopify_demo_summary.csv), [`public_demo/shopify_demo_output.png`](public_demo/shopify_demo_output.png)
+  - Proof outputs: [`public_demo/shopify_demo_summary.csv`](public_demo/shopify_demo_summary.csv), [`public_demo/shopify_demo_output.png`](public_demo/shopify_demo_output.png)
 
-## Why Trust This
-- Deterministic packaging: same commands produce the same release structure.
-- Contracted chart narrative: fixed 3-chart story, decision-aligned memo.
-- Quality gates:
+## Trust Signals
+- Deterministic release flow:
+  - `scripts/public_audit.py` enforces public-safety checks
+  - `scripts/build_public_zip.py` produces a stable latest release zip
+- Reproducible quality gates:
   - `pytest -q`
-  - public redaction scanner: `scripts/public_audit.py`
-  - release bundler: `scripts/build_public_zip.py`
-- Security/redaction controls:
-  - public release built from allowlisted artifacts only
-  - forbidden token/path scan before packaging
-  - private internal work kept outside public release bundle
+  - `public_audit.py`
+  - `build_public_zip.py`
+- Explicit decision framing:
+  - directional, non-causal baseline
+  - defined guardrails for margin and credit-like risk
 
-## Run (Minimal, Copy-Paste)
+## Minimal Run Commands
 ```powershell
 py -3 -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -47,27 +50,41 @@ py -3 scripts/public_audit.py
 py -3 scripts/build_public_zip.py
 ```
 
-## Proof (Current Repo)
-- Tests: `pytest -q` (see latest run in terminal output below)
-- Public audit: no forbidden paths/tokens in public bundle inputs
-- Release artifact: [`exports/public_release_latest.zip`](exports/public_release_latest.zip)
+## Proof of Output
+- Latest verified gates (local):
+  - `pytest -q`: pass
+  - `public_audit.py`: pass
+  - `build_public_release.py`: pass
+- Primary output:
+  - [`exports/public_release_latest.zip`](exports/public_release_latest.zip)
 
 ### Visual Snapshot
 ![Chart 1 - Cohort Logo Retention](public_demo/story_chart_1.png)
 ![Chart 2 - Net Retention Proxy Curves](public_demo/story_chart_2.png)
 ![Chart 3 - M2 Retention by Family](public_demo/story_chart_3.png)
 
-## Public vs Private
-- Public-safe artifacts:
+## Public vs Private Scope
+- Public-safe:
   - `public_release/`
-  - `exports/public_release_latest.zip`
-  - `README.md`, `case_study_readme.md`, decision docs linked above
-- Private/internal working surfaces (not part of public release contract):
-  - private working folders and internal notes
-  - internal pipeline scratch/temp folders
-  - raw input staging and local environment artifacts
-- Redaction note: publish from the public bundle output, not from raw repo root.
+  - `public_demo/` proof artifacts
+  - docs linked in this README
+- Private/internal working surfaces:
+  - local scratch and temporary folders
+  - raw input staging and environment-specific files
+- Redaction rule:
+  - publish from `exports/public_release_latest.zip`, not from ad hoc root selection
 
-## Additional Reviewer Docs
-- Buyer-friction audit: [`docs/AUDIT_PUBLIC.md`](docs/AUDIT_PUBLIC.md)
-- Release checklist: [`docs/SHIP_CHECKLIST.md`](docs/SHIP_CHECKLIST.md)
+## Roadmap (Next Public Hardening Steps)
+- Add explicit release changelog snapshots per public zip build.
+- Tighten docs index so optional deep dives are clearly separated from reviewer-critical docs.
+- Add link validation output artifact for each release run.
+
+## Known Limitations
+- Current outputs are diagnostic and prioritization-oriented, not causal lift measurement.
+- Financial guardrails rely on finance-approved thresholds set before experiment launch.
+- Public proof artifacts are CSV/PNG/Markdown outputs, not a hosted application.
+
+## Additional Governance Docs
+- Public clarity audit: [`docs/AUDIT_PUBLIC.md`](docs/AUDIT_PUBLIC.md)
+- Public ship checklist: [`docs/SHIP_PUBLIC.md`](docs/SHIP_PUBLIC.md)
+- Technical appendix: [`docs/TECHNICAL_APPENDIX.md`](docs/TECHNICAL_APPENDIX.md)

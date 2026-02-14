@@ -1,22 +1,22 @@
 # Archive Index
 
-This folder is the single index for supplementary and deep-dive documents that are not required in the primary reviewer path.
+This folder indexes supplementary documents that are not required for a first-pass hiring manager review.
 
-## Primary Reviewer Path (read first)
+## Primary Reviewer Path
 - `README.md`
-- `exports/cohort_retention_story.pdf`
-- `docs/DECISION_MEMO_1PAGE.md`
-- `docs/TECHNICAL_APPENDIX.md`
+- `public_release/exports/cohort_retention_story.html`
+- `public_release/docs/DECISION_MEMO_1PAGE.md`
+- `public_release/docs/HIRING_MANAGER_TLDR.md`
 
-## Supplementary Docs (kept in `docs/`)
+## Supplementary Documents
 - `CHART2_SELECTION_CONTRACT.md`
 - `CHART_TALK_TRACKS.md`
 - `COHORT_DEFENSE_CARD.md`
 - `METRIC_DICTIONARY.md`
 - `PROGRESS_REPORT.md`
-- `TEACHING_ANSWER_KEY.md`
-- `TEACHING_REPORT.md`
 - `PUBLIC_RELEASE_PLAN.md`
 - `PUBLIC_RELEASE_ALLOWLIST.md`
+- `TECHNICAL_APPENDIX.md`
 
-Note: these are retained for transparency and teaching, but are optional for first-pass hiring review.
+## Usage Note
+Treat this archive as optional context for deep review, not the primary evaluation path.

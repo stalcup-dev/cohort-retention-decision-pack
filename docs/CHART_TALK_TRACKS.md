@@ -1,10 +1,9 @@
 # CHART TALK TRACKS
 
 ## Use This With
-- Learning map: `docs/TEACHING_HUB.md`
-- Caption quality check: `docs/TEACHING_ANSWER_KEY.md`
 - Definition guardrails: `docs/COHORT_DEFENSE_CARD.md`
 - Story artifact: `exports/cohort_retention_story.html`
+- Decision memo: `docs/DECISION_MEMO_1PAGE.md`
 
 ## Chart 1: Logo Retention Heatmap
 - Setup: This chart answers how repeat purchase propensity decays by cohort month over months 0..6.
@@ -13,13 +12,13 @@
 - Caveat: Directional, not causal; cohort composition can explain part of the gap.
 - Next action: Prioritize lifecycle intervention timing where decay is steepest.
 
-## Chart 2: Family Impact Scatter (M2)
-- Setup: This chart answers which first-order families combine weak repeat (x) and weak value after credits (y) at month 2.
-- Observation template 1: "`[Family]` sits bottom-right (high logo, low net proxy), signaling refund drag despite repeat intent."
-- Observation template 2: "`[Family]` sits top-left (low logo, decent net proxy), signaling repeat weakness more than value loss."
-- Caveat: Directional, not causal; points use observed M2 only and suppress tiny-n families (`n<50`).
-- Next action: Pick 2-3 bottom-left / bottom-right families for returns-mitigation + replenishment tests.
-- Memo bridge: `docs/DECISION_MEMO_1PAGE.md` -> `## Plays`.
+## Chart 2: Net Retention Proxy Curves (3 Cohorts)
+- Setup: This chart answers how refund-aware value retention evolves across lifecycle months for representative cohorts.
+- Observation template 1: "`[Cohort A]` starts at `[X]` and trends to `[Y]` by M6, indicating `[faster/slower]` value decay."
+- Observation template 2: "Relative spread between `[cohort_low]` and `[cohort_high]` highlights expected volatility bands for planning."
+- Caveat: Directional, not causal; curves are monthly proxy ratios with denominator guardrails and observed-month masking.
+- Next action: Use curve trajectory to set realistic lift expectations and interim checkpoints.
+- Memo bridge: `docs/DECISION_MEMO_1PAGE.md` -> `## Impact Model (scenario, not observed)`.
 
 ## Chart 3: M2 Retention by first_product_family
 - Setup: This chart answers which first-order families over/under-index at month 2 and whether sample sizes are decision-safe.

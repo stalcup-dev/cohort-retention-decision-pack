@@ -1,9 +1,9 @@
 # Technical Appendix
 
-## Learning Map
-- Start with `docs/TEACHING_HUB.md` for the full teaching path.
-- Use `docs/COHORT_DEFENSE_CARD.md` for interview-safe definitions.
-- Use `docs/EXPERIMENT_BRIEF_SAMPLE.md` and `docs/WEEK2_READOUT_TEMPLATE.md` for execution practice.
+## Reviewer Map
+- Start with `README.md` for business framing and artifact navigation.
+- Use `docs/COHORT_DEFENSE_CARD.md` for frozen definitions and interpretation rules.
+- Use `docs/EXPERIMENT_BRIEF_SAMPLE.md` and `docs/WEEK2_READOUT_TEMPLATE.md` for execution cadence artifacts.
 
 ## Scope
 This appendix is the single technical reference for the decision pack.
@@ -50,8 +50,8 @@ This appendix is the single technical reference for the decision pack.
 ## Related Narratives
 - Case study: `case_study_readme.md`
 - Public README: `README_PUBLIC.md`
-- Experiment brief sample: `docs/EXPERIMENT_BRIEF_SAMPLE.md`
-- Week-2 readout template: `docs/WEEK2_READOUT_TEMPLATE.md`
+- Experiment brief: `docs/EXPERIMENT_BRIEF_SAMPLE.md`
+- Week-2 readout: `docs/WEEK2_READOUT_TEMPLATE.md`
 - Supplementary docs index: `docs/archive/README.md`
 
 ## SQL Translation

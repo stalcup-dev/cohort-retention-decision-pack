@@ -70,17 +70,17 @@ The ingest script writes repo-relative outputs under `public_demo/`:
    - `ingest_shopify=FAIL missing_required_columns=['col_a','col_b']`
 2. Unparseable timestamps in `created_at`
    - Failure message format:
-   - `ingest_shopify=FAIL bad_created_at_rows=<n>`
+   - `ingest_shopify=FAIL bad_created_at_rows={count}`
 3. Duplicate `id` values
    - Failure message format:
-   - `ingest_shopify=FAIL duplicate_order_ids=<n>`
+   - `ingest_shopify=FAIL duplicate_order_ids={count}`
 4. Non-numeric quantity or price
    - Failure message format:
-   - `ingest_shopify=FAIL non_numeric_quantity_or_price_rows=<n>`
+   - `ingest_shopify=FAIL non_numeric_quantity_or_price_rows={count}`
 5. Non-positive `total_price` share over threshold (beta warning gate)
    - Failure threshold: >20%
    - Failure message format:
-   - `ingest_shopify=FAIL non_positive_total_price_pct=<pct>`
+   - `ingest_shopify=FAIL non_positive_total_price_pct={pct}`
 
 ## Success Contract
 On success, script prints repo-relative paths only:

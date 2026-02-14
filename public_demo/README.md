@@ -1,12 +1,25 @@
-# Public Demo
+# Public Proof Slice
 
-This demo is a small, reproducible slice that shows one cohort chart and one summary table without exposing the full internal pipeline.
+## Purpose
+Provide a minimal, reproducible proof path for adapter outputs and visual sanity checks without exposing internal pipeline internals.
 
-## Run
+## Audience
+- Hiring managers validating execution credibility
+- RevOps reviewers validating output traceability
+
+## How to Run
 ```powershell
 py -3 public_demo/demo.py
+py -3 public_demo/shopify_adapter_demo.py
 ```
 
 ## Outputs
 - `public_demo/demo_output.png`
 - `public_demo/demo_summary.csv`
+- `public_demo/shopify_demo_output.png`
+- `public_demo/shopify_demo_summary.csv`
+
+## Visual Proof Files
+- Story snapshot 1: `public_demo/story_chart_1.png`
+- Story snapshot 2: `public_demo/story_chart_2.png`
+- Story snapshot 3: `public_demo/story_chart_3.png`

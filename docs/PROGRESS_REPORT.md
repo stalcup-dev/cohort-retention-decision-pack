@@ -1,35 +1,23 @@
-# Progress Report — Cohort Retention v1.2 (Teaching Edition)
+# Progress Report - Public Release Status
 
-## Status
-**Block 1 (pipeline + gates): DONE**  
-**Block 2 (story notebook → HTML + decision memo): DONE**  
-**Block 3 (Teaching Edition): NOT STARTED (this is the redo request)**
+## Current State
+- Decision pack artifacts are generated and publishable.
+- Public release bundle is available at `exports/public_release_latest.zip`.
+- Governance checks and packaging checks are runnable from local commands.
 
-## What’s shipped (current)
-- `exports/cohort_retention_story.html` (3 charts, code hidden)
-- `docs/DECISION_MEMO_1PAGE.md`
-- `docs/QA_CHECKLIST.md`
-- `docs/DRIVER_COVERAGE_REPORT.md`
-- `data_processed/` outputs + gate receipts (A/B/C)
+## Delivered Artifacts
+- Story: `public_release/exports/cohort_retention_story.html`
+- Memo: `public_release/docs/DECISION_MEMO_1PAGE.md`
+- Hiring summary: `public_release/docs/HIRING_MANAGER_TLDR.md`
+- Case narrative: `public_release/case_study_readme.md`
+- Adapter contract and proof outputs: `docs/SHOPIFY_ADAPTER_CONTRACT.md`, `public_demo/shopify_demo_summary.csv`, `public_demo/shopify_demo_output.png`
 
-## Evidence pack (numbers)
-- order_lines.csv: 1,067,371
-- products.csv: 5,131
-- orders.csv: 53,628
-- transactions.csv: 53,628
-- customers.csv: 5,878
-- customer_month_activity.csv: 41,146
-- Gate A: 0.0000% non-positive net proxy; trigger NO
-- Gate B: 79.70% gross mapped non-Other; 59.08% customers non-Other
-- Gate C: material_sensitivity count 0 across 21 families
+## Verification Signals
+- `pytest -q` for regression safety.
+- `scripts/public_audit.py` for public redaction checks.
+- `scripts/build_public_zip.py` for deterministic release packaging.
 
-## Teaching Edition goal (redo request)
-Make this project **learnable**:
-- Every transformation explained (why, assumptions, pitfalls)
-- Code heavily commented, not just “working”
-- A teaching notebook that walks step-by-step and prints intermediate checkpoints
-
-## Next work blocks (90-minute chunks)
-1) **Docs:** write `docs/TEACHING_GUIDE.md` (concepts + pipeline map + definitions + gates)  
-2) **Notebook:** create `notebooks/cohort_retention_teaching.ipynb` (visible code + commentary + checkpoints)  
-3) **Exports:** export teaching notebook to HTML with code visible; keep story HTML code-hidden
+## Open Items
+- Maintain release cadence with explicit changelog notes per bundle refresh.
+- Keep public docs aligned with latest artifact paths and proof outputs.
+- Continue documenting known limitations as scope changes.

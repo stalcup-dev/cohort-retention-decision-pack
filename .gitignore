@@ -15,3 +15,4 @@ data_processed/*.csv
 !data_processed/confound_m2_family_all_vs_retail.csv
 !data_processed/gate_a.json
 !data_processed/ingest_stats.json
+docs/TEACHING*.md
