@@ -8,6 +8,7 @@ venv/
 pytest-cache-files-*/
 .tmp/
 .tmp*/
+private_teaching/
 data_raw/*
 !data_raw/.gitkeep
 data_processed/*.csv
