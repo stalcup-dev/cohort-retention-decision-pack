@@ -1,24 +1,35 @@
 # Cohort Retention Decision Pack (DTC / eCommerce)
 
-## Decision This Supports
-Which first-order product families should be prioritized first to improve M2 retention and value retention, without harming margin quality?
+## Executive Summary (90-second skim)
+- Business question: which first-order families should be prioritized first to improve M2 retention and value quality.
+- North Star: `M2 logo retention (cohort-weighted)`.
+- Key signal (descriptive): `Seasonal`, `Home_Fragrance`, and `Bags` under-index at M2.
+- Decision: prioritize reversible retention tests in those three families with explicit thresholds and guardrails.
+- Alpha honesty: this repo is diagnostic + execution planning, not causal attribution.
 
-## Open First (Reviewer Path)
-1. Story (PDF): `exports/cohort_retention_story.pdf`
-2. Story (HTML): `exports/cohort_retention_story.html`
-3. Decision memo: `docs/DECISION_MEMO_1PAGE.md`
-4. Case study narrative: `case_study_readme.md`
+## Start Here
+1. Story PDF: [`exports/cohort_retention_story.pdf`](exports/cohort_retention_story.pdf)
+2. Story HTML: [`exports/cohort_retention_story.html`](exports/cohort_retention_story.html)
+3. Decision memo: [`docs/DECISION_MEMO_1PAGE.md`](docs/DECISION_MEMO_1PAGE.md)
+4. Case study: [`case_study_readme.md`](case_study_readme.md)
+5. Expert audit summary: [`docs/EXPERT_UPDATE.md`](docs/EXPERT_UPDATE.md)
 
-## 60-Second Review Flow
-- Read the decision + targets in `docs/DECISION_MEMO_1PAGE.md`.
-- Use `exports/cohort_retention_story.pdf` for GitHub-visible charts.
-- Open `exports/cohort_retention_story.html` for the full rendered artifact.
-- Check `docs/EXPERT_UPDATE.md` for scope and sanity receipts.
+## Visual Snapshot
+![Chart 1 - Cohort Logo Retention](public_demo/story_chart_1.png)
+![Chart 2 - Net Retention Proxy Curves](public_demo/story_chart_2.png)
+![Chart 3 - M2 Retention by Family](public_demo/story_chart_3.png)
+
+## What You Get
+- Story artifacts: `exports/cohort_retention_story.pdf`, `exports/cohort_retention_story.html`
+- Decision artifacts: `docs/DECISION_MEMO_1PAGE.md`, `docs/EXPERT_UPDATE.md`
+- Governance artifacts: `docs/QA_CHECKLIST.md`, `docs/DRIVER_COVERAGE_REPORT.md`
+- Final pack output: `exports/final_decision_pack_v1`
+- Public-safe pack output: `exports/public_release_latest.zip`
 
 ## One Command: Zero -> Decision Pack
 Prerequisites:
-- Place raw input at `data_raw/OnlineRetailII.xlsx`.
-- Install dependencies once:
+- Place raw input at `data_raw/OnlineRetailII.xlsx`
+- Install dependencies:
 ```powershell
 py -3 -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -26,35 +37,23 @@ pip install -e .
 pip install -e ".[dev]"
 ```
 
-Run full flow:
+Run:
 ```powershell
 py -3 scripts/run_zero_to_decision.py --input data_raw/OnlineRetailII.xlsx
 ```
 
-This command:
-- runs pipeline generation (`scripts/run_pipeline.py`)
-- runs full smoke validation (`scripts/smoke_pipeline.py`)
-- builds final pack (`scripts/build_final_pack.py`)
-- prints elapsed minutes + key output paths
-
-## Key Artifacts
-- Story PDF: `exports/cohort_retention_story.pdf`
-- Story HTML: `exports/cohort_retention_story.html`
-- Memo: `docs/DECISION_MEMO_1PAGE.md`
-- QA checklist: `docs/QA_CHECKLIST.md`
-- Coverage report: `docs/DRIVER_COVERAGE_REPORT.md`
-- Expert update: `docs/EXPERT_UPDATE.md`
-- Final pack folder: `exports/final_decision_pack_v1`
-- Experiment brief sample: `docs/EXPERIMENT_BRIEF_SAMPLE.md`
-- Week-2 readout template: `docs/WEEK2_READOUT_TEMPLATE.md`
+## Reviewer Checklist
+- Verify targets are consistent across story and memo.
+- Verify thresholds and guardrails are explicit (`+X pp`, `+Y pp`, `-Z%`).
+- Verify public artifacts are present and linkable.
+- Verify no private/internal teaching assets are referenced in public package.
+- Use pack zip as canonical handoff (`exports/public_release_latest.zip`).
 
 ## Teaching Path
-- Teaching hub (all learning docs mapped): `docs/TEACHING_HUB.md`
+- Teaching hub: `docs/TEACHING_HUB.md`
 - Teaching notebook export: `exports/cohort_retention_teaching.html`
 - Private teaching hub: `private_teaching/index.html`
 
 ## Technical Detail
-Single technical appendix: `docs/TECHNICAL_APPENDIX.md`
-
-## Optional Deep Dives
-Supplementary document index: `docs/archive/README.md`
+- Technical appendix: `docs/TECHNICAL_APPENDIX.md`
+- Supplementary docs index: `docs/archive/README.md`
