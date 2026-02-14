@@ -15,7 +15,7 @@ Prioritize these three families for **reversible retention tests** (fast, contro
 ## Impact Model (scenario, not observed)
 **Alpha honesty:** no measured intervention lift yet - this is a diagnostic pack + test plan.
 
-If we run tests that improve M2 logo retention by **Delta = +1 to +5 pp** among eligible new customers in the target families, then:
+If we run tests that improve M2 logo retention by a pre-agreed **Delta** among eligible new customers in the target families, then:
 
 - Incremental repeat customers (Month 2) ~= `Eligible_New_Customers * Delta`
 - Incremental orders ~= `Incremental_Repeat_Customers * Orders_per_Repeater_M2`
@@ -28,9 +28,9 @@ If we run tests that improve M2 logo retention by **Delta = +1 to +5 pp** among 
 ## Experiment Design Snapshot (2-week operating cycle)
 **Unit:** customer-level randomization (new customers whose first order is in target family)  
 **Arms:** Control vs Test (offer/messaging/merch treatment per family)  
-**Primary success:** M2 logo retention **+X pp** vs control  
-**Secondary success:** M2 net retention proxy **+Y pp** vs control; close `net-minus-logo gap` toward >=0 pp  
-**Guardrails (must hold):** margin proxy not worse than **-Z%**, no cohort quality deterioration, no adverse shift in credit-like/refund/chargeback rate  
+**Primary success:** M2 logo retention lift vs control at a pre-agreed threshold  
+**Secondary success:** M2 net retention proxy lift vs control; close `net-minus-logo gap` toward >=0 pp  
+**Guardrails (must hold):** margin proxy above a finance-approved floor, no cohort quality deterioration, no adverse shift in credit-like/refund/chargeback rate  
 **Cadence:** Week 1 finalize hypothesis + instrumentation + thresholds; Week 2 launch + interim readout + scale/pause decision
 
 ## What Shipped

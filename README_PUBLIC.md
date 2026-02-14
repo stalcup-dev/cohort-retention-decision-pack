@@ -32,6 +32,6 @@ Shopify-shaped; direct Shopify exports supported via adapter artifacts.
 ## Reviewer Checklist
 - Confirm target families are consistent across story and memo (`Seasonal`, `Home_Fragrance`, `Bags`).
 - Confirm the narrative is directional and non-causal.
-- Confirm thresholds and guardrails are explicit (`+X pp`, `+Y pp`, `-Z%`).
+- Confirm thresholds and guardrails are explicit, numeric, and approved before launch.
 - Confirm adapter path and demo artifacts are present and public-safe.
 - Use the zip bundle as the canonical handoff artifact.

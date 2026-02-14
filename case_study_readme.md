@@ -18,14 +18,14 @@ which product families should be prioritized first to improve early retention an
 - Audit merchandising and lifecycle touchpoints for `Seasonal`, `Home_Fragrance`, and `Bags`.
 - Build a ranked hypothesis slate (2-3 tests per family) with expected lift ranges.
 - Define measurement rules before launch:
-- M2 logo retention target: `+X pp` vs control.
-- M2 net proxy retention target: `+Y pp`.
+- M2 logo retention target: pre-agreed percentage-point lift vs control.
+- M2 net proxy retention target: pre-agreed percentage-point lift vs control.
 - Net-minus-logo gap target: toward `>= 0 pp` in at least 2 of 3 families.
 
 ### Week 2: Launch, Read, Decide
 - Run controlled tests per family (offer/bundle, post-purchase flows, cross-sell/attach).
 - Monitor guardrails in parallel:
-- margin proxy not worse than `-Z%`
+- margin proxy not worse than the finance-approved floor
 - no cohort-quality deterioration
 - no adverse credit-like-rate shift
 - Deliver a Week-2 readout with `scale`, `pause`, or `iterate` recommendations.

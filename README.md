@@ -44,15 +44,10 @@ py -3 scripts/run_zero_to_decision.py --input data_raw/OnlineRetailII.xlsx
 
 ## Reviewer Checklist
 - Verify targets are consistent across story and memo.
-- Verify thresholds and guardrails are explicit (`+X pp`, `+Y pp`, `-Z%`).
+- Verify thresholds and guardrails are explicit, numeric, and owner-approved in the memo.
 - Verify public artifacts are present and linkable.
-- Verify no private/internal teaching assets are referenced in public package.
+- Verify no private/internal assets are referenced in public package.
 - Use pack zip as canonical handoff (`exports/public_release_latest.zip`).
-
-## Teaching Path
-- Teaching hub: `docs/TEACHING_HUB.md`
-- Teaching notebook export: `exports/cohort_retention_teaching.html`
-- Private teaching hub: `private_teaching/index.html`
 
 ## Technical Detail
 - Technical appendix: `docs/TECHNICAL_APPENDIX.md`
